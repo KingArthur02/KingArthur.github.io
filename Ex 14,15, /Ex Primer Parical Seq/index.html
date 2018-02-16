@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+ <script src="p5/p5.js"></script>
+ <script src="p5/addons/p5.sound.js"></script>
+ <script src="p5/addons/p5.dom.js"></script>
+ <script src="NexusUI.js"></script>
+
+ <script src="seq.js"></script>
+
+
+</head>
+
+<body>
+
+ <div id="seq"></div>
+
+
+</body>
+
+<script>
+
+ var sequencer = new Nexus.Sequencer('#seq', {
+   'size': [320, 200],
+   'mode': 'toggle',
+   'rows': 5,
+   'columns': 3
+ })
+ sequencer.on('step', function (v) {
+  playStep(v)
+})
+
+
+
+
+</script>
+
+</html>

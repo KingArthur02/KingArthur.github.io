@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="p5/p5.js"></script>
+    <script src="p5/addons/p5.dom.js"></script>
+    <script src="p5/addons/p5.sound.js"></script>
+    <script src="NexusUI.js"></script>
+    <script src="Piano.js"></script>
+    <title>Ex1stPartial</title>
+</head>
+
+<body>
+    <div id="piano"></div>
+    <script>
+        var piano = new Nexus.Piano('#piano', {
+            'size': [500, 125],
+            'mode': 'button',
+            'lowNote': 24,
+            'highNote': 60
+        })
+        piano.on('change', function (v) {
+            console.log(v);
+            
+            if (v.state==true) {
+                switch (v.note) {
+                
+                case 24:
+                    osc.freq(261.626);
+                    osc.start();
+                    break;
+
+                case 25:
+                    osc.freq(277.183);
+                    osc.start();
+                    break;
+                case 26:
+                    osc.freq(293.665);
+                    osc.start();
+                    break;        
+                case 27:
+                    osc.freq(311.127);
+                    osc.start();
+                    break; 
+                case 28:
+                    osc.freq(329.628);
+                    osc.start();
+                    break;   
+                case 29:
+                    osc.freq(349.228);
+                    osc.start();
+                    break;   
+                case 30:
+                    osc.freq(369.994);
+                    osc.start();
+                    break; 
+                case 31:
+                    osc.freq(391.995);
+                    osc.start();
+                    break; 
+                case 32:
+                    osc.freq(415.305);
+                    osc.start();
+                    break; 
+                case 33:
+                    osc.freq(440.000);
+                    osc.start();
+                    break; 
+                case 34:
+                    osc.freq(466.164);
+                    osc.start();
+                    break; 
+                case 35:
+                    osc.freq(493.883);
+                    osc.start();
+                    break; 
+                case 36:
+                    osc.freq(523.251);
+                    osc.start();
+                    break; 
+                 case 37:
+                    osc.freq(554.365);
+                    osc.start();
+                    break;  
+                case 38:
+                    osc.freq(587.330);
+                    osc.start();
+                    break;  
+                case 39:
+                    osc.freq(622.254);
+                    osc.start();
+                    break; 
+                case 40:
+                    osc.freq(659.255);
+                    osc.start();
+                    break; 
+                case 41:
+                    osc.freq(698.456);
+                    osc.start();
+                    break; 
+                case 42:
+                    osc.freq(739.989);
+                    osc.start();
+                    break; 
+                case 43:
+                    osc.freq(783.991);
+                    osc.start();
+                    break; 
+                case 44:
+                    osc.freq(830.609);
+                    osc.start();
+                    break; 
+                case 45:
+                    osc.freq(880.000);
+                    osc.start();
+                    break; 
+                case 46:
+                    osc.freq(932.328);
+                    osc.start();
+                    break; 
+                case 47:
+                    osc.freq(987.767);
+                    osc.start();
+                    break;
+                case 48:
+                    osc.freq(1046.50);
+                    osc.start();
+                    break;  
+                case 49:
+                    osc.freq(1108.73);
+                    osc.start();
+                    break; 
+                case 50:
+                    osc.freq(1174.66);
+                    osc.start();
+                    break; 
+                case 51:
+                    osc.freq(1244.51);
+                    osc.start();
+                    break; 
+                case 52:
+                    osc.freq(1318.51);
+                    osc.start();
+                    break; 
+                case 53:
+                    osc.freq(1396.91);
+                    osc.start();
+                    break; 
+                case 54:
+                    osc.freq(1479.98);
+                    osc.start();
+                    break; 
+                case 55:
+                    osc.freq(1567.98);
+                    osc.start();
+                    break; 
+                case 56:
+                    osc.freq(1661.22);
+                    osc.start();
+                    break; 
+                case 57:
+                    osc.freq(1760.00);
+                    osc.start();
+                    break; 
+                case 58:
+                    osc.freq(1864.66);
+                    osc.start();
+                    break; 
+                case 59:
+                    osc.freq(1975.53);
+                    osc.start();
+                    break; 
+                case 60:
+                    osc.freq(2093.00);
+                    osc.start();
+                    break; 
+                
+
+            }
+
+            }
+            if (v.state==false) {
+                osc.stop();
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>
